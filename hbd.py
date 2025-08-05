@@ -116,7 +116,7 @@ def show_birthday_page():
 
     # --- MAIN CONTENT LAYOUT ---
     st.markdown('<div class="main-container">', unsafe_allow_html=True)
-    st.markdown('<p class="title-text">🍾 Happy Birthday Ashish! 🎉</p>', unsafe_allow_html=True)
+    st.markdown('<h1 class="title-text">🍾 Happy Birthday Ashish! 🎉</h1>', unsafe_allow_html=True)
 
     # Display the image
     image_url = "hbd.png"
