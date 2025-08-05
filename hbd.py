@@ -49,7 +49,7 @@ def show_birthday_page():
         
         .subtitle-text {
             font-family: 'VT323', monospace;
-            font-size: calc(1.4rem + 1.2vw); /* Increased responsive font size */
+            font-size: 18; /* Increased responsive font size */
             line-height: 1.4;
             color: #FFFFFF;
             text-shadow: 2px 2px 0px #000000;
