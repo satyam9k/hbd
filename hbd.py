@@ -20,6 +20,7 @@ def show_birthday_page():
         .stApp {
             /* Sunset gradient background */
             background-image: linear-gradient(to top, #30154a, #823a68, #d47071, #f9b47a, #fffd9c);
+            font-size: 16px; /* Set a base font size for rem units to be consistent */
         }
 
         .main-container {
@@ -29,25 +30,51 @@ def show_birthday_page():
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 1rem; /* Reduced padding for smaller screens */
+            padding: 1rem;
         }
+        
         .title-text {
             font-family: 'VT323', monospace;
-            font-size: 3.5rem; /* Slightly adjusted for responsiveness */
-            color: #FFFFFF; /* White for better contrast on gradient */
-            text-shadow: 4px 4px 0px #000000; /* Black shadow for pixel effect */
+            /* Use calc() for a responsive font size: a base size + a value that scales with the viewport width */
+            font-size: calc(2.2rem + 2.5vw);
+            line-height: 1.2;
+            color: #FFFFFF;
+            text-shadow: 4px 4px 0px #000000;
             margin-bottom: 1.5rem;
         }
+        
         .subtitle-text {
             font-family: 'VT323', monospace;
-            font-size: 1.8rem; /* Slightly adjusted for responsiveness */
-            color: #FFFFFF; /* White for better contrast */
+            font-size: calc(1.2rem + 1vw);
+            line-height: 1.4;
+            color: #FFFFFF;
             text-shadow: 2px 2px 0px #000000;
         }
+
+        /* Style for the image caption to make it larger and more readable */
+        figcaption {
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem !important; /* Use !important to override Streamlit's default styles */
+            color: #FFFFFF !important;
+            text-shadow: 1px 1px 0px #000000;
+            margin-top: 0.5rem;
+        }
+
+        /* Media query to cap the font size on very large screens */
+        @media (min-width: 1200px) {
+            .title-text {
+                font-size: 5rem; /* Maximum font size */
+            }
+            .subtitle-text {
+                font-size: 2.2rem; /* Maximum font size */
+            }
+        }
+        
         /* This makes the audio player invisible but still functional */
         audio {
             display: none;
         }
+        
         /* Ensure image scales nicely */
         .stImage img {
             max-width: 100%;
@@ -58,6 +85,7 @@ def show_birthday_page():
         }
         </style>
     """, unsafe_allow_html=True)
+
 
     # --- CUSTOM AUDIO PLAYER (DELAYED AUTOPLAY + LOOP) ---
 
