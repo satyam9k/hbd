@@ -91,7 +91,7 @@ def show_birthday_page():
 
     # Display the image
     image_url = "hbd.png"
-    st.image(image_url, caption="A Legendary Moment! ✨", use_column_width='auto')
+    st.image(image_url, caption="A Legendary Moment! ✨", use_container_width='auto')
 
     st.markdown('<p class="subtitle-text">Here\'s to 25 years of awesomeness... and a more legen... wait for it... dary life! 💐🚀🥂🎂</p>', unsafe_allow_html=True)
 
