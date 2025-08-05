@@ -70,7 +70,7 @@ def show_birthday_page():
                 font-size: 5.5rem; /* Maximum font size */
             }
             .subtitle-text {
-                font-size: 2.5rem; /* Maximum font size */
+                font-size: 18; /* Maximum font size */2.5rem
             }
         }
         
